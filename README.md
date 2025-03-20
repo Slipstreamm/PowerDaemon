@@ -9,3 +9,7 @@ it puts a icon in the system tray with a exit button in context menu dont even k
 
 # Endpoints
 /sleep /hibernate /shutdown /restart
+
+# awesome example
+
+GET http://10.0.0.1:8000/sleep
