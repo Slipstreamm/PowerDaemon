@@ -3,7 +3,7 @@ stupid program i (github copilot) made for myself basically it lets you make a h
 
 you need a file called allowed_ip.txt and u put a single line with the ip you want to allow requests from. idek if it works if u put 0.0.0.0 or something for all ips cause im only doing it from my phone anyway idc
 
-and you need psshutdown.exe in the same directory as powerdaemon.exe. both are provided in releases
+and you need psshutdown.exe in the same directory as powerdaemon.exe. both are provided in releases. its psshutdown.exe from sysinternals
 
 # Endpoints
 /sleep /hibernate /shutdown /restart
