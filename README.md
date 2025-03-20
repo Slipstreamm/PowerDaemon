@@ -5,5 +5,7 @@ you need a file called allowed_ip.txt and u put a single line with the ip you wa
 
 and you need psshutdown.exe in the same directory as powerdaemon.exe. both are provided in releases. its psshutdown.exe from sysinternals
 
+it puts a icon in the system tray with a exit button in context menu dont even know if it works
+
 # Endpoints
 /sleep /hibernate /shutdown /restart
