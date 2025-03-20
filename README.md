@@ -11,5 +11,7 @@ it puts a icon in the system tray with a exit button in context menu dont even k
 /sleep /hibernate /shutdown /restart
 
 # awesome example
-
 GET http://10.0.0.1:8000/sleep
+
+# Compiling
+download the stupid source code and open the solution in visual studio then press f6
