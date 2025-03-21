@@ -15,3 +15,6 @@ GET http://10.0.0.1:8000/sleep
 
 # Compiling
 download the stupid source code and open the solution in visual studio then press f6
+
+# Contribute
+feel free to make a pull request to make the program not super terrible idec if you just had ai write more code
