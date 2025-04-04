@@ -1,20 +1,66 @@
 # PowerDaemon
-stupid program i (github copilot) made for myself basically it lets you make a http get requst to an endpoint and it does the thign on ur device based on the endpoint. default port is 8000 change the source code urself if u want a different one i aint doing allat
 
-you need a file called allowed_ip.txt and u put a single line with the ip you want to allow requests from. idek if it works if u put 0.0.0.0 or something for all ips cause im only doing it from my phone anyway idc
+PowerDaemon is a lightweight HTTP server that enables remote execution of power operations—such as sleep, hibernate, shutdown, and restart—on your Windows device. By sending specific HTTP GET requests from an authorized IP address, you can control these operations conveniently.
 
-and you need psshutdown.exe (from sysinternals) in the same directory as powerdaemon.exe. both are provided in releases. this is because the main program invokes psshutdown for power operations
+## Features
 
-it puts a icon in the system tray with a exit button in context menu dont even know if it works
+- **Remote Control**: Execute power operations on your device via simple HTTP GET requests.
+- **IP Whitelisting**: Restrict access to a specific IP address using an `allowed_ip.txt` file.
+- **System Tray Integration**: Provides a system tray icon with an exit option for easy termination.
 
-# Endpoints
-/sleep /hibernate /shutdown /restart
+## Requirements
 
-# awesome example
-GET http://10.0.0.1:8000/sleep
+- **Operating System**: Windows
+- **Dependencies**:
+  - `psshutdown.exe` from Sysinternals (included in the releases)
 
-# Compiling
-download the stupid source code and open the solution in visual studio then press f6
+## Setup Instructions
 
-# Contribute
-feel free to make a pull request to make the program not super terrible idec if you just had ai write more code
+1. **Download PowerDaemon**: Obtain the latest `powerdaemon.exe` and `psshutdown.exe` from the [Releases](https://github.com/Slipstreamm/PowerDaemon/releases) section.
+
+2. **Configure Allowed IP**:
+   - Create a file named `allowed_ip.txt` in the same directory as `powerdaemon.exe`.
+   - Add the IP address permitted to send requests. For example:
+     ```
+     192.168.1.100
+     ```
+     *Note*: Using `0.0.0.0` to allow all IPs is untested and not recommended.
+
+3. **Run PowerDaemon**:
+   - Place `psshutdown.exe` alongside `powerdaemon.exe`.
+   - Execute `powerdaemon.exe`. An icon will appear in the system tray.
+
+## Usage
+
+Send HTTP GET requests to the following endpoints to perform power operations:
+
+- `/sleep`: Puts the device to sleep.
+- `/hibernate`: Hibernates the device.
+- `/shutdown`: Shuts down the device.
+- `/restart`: Restarts the device.
+
+**Example**:
+
+To put the device to sleep from an authorized IP (`192.168.1.100`):
+
+```
+GET http://192.168.1.100:8000/sleep
+```
+
+*Note*: The default port is `8000`. To change this, modify the source code accordingly.
+
+## Compilation
+
+To build PowerDaemon from source:
+
+1. **Download Source Code**: Clone or download the repository.
+2. **Open in Visual Studio**: Load the solution file in Visual Studio.
+3. **Build the Solution**: Press `F6` to compile.
+
+## Contributing
+
+Contributions are welcome to enhance PowerDaemon's functionality and reliability. Feel free to submit pull requests to improve the codebase.
+
+## Disclaimer
+
+This project was initially created for personal use and may contain unrefined code. Use it at your own discretion.
